@@ -28,9 +28,9 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     role: 'Web Developer Intern',
-    company: 'Internship Program',
+    company: 'Symph, Inc.',
     period: '2021',
-    location: '',
+    location: 'Cebu, PH · Remote',
     type: 'Internship',
     description:
       'Gained foundational professional experience in web development — collaborating in a team environment and delivering features using HTML, CSS, JavaScript, and backend integration.',

@@ -60,7 +60,7 @@ const Projects = () => {
                 <p className='text-muted-foreground text-xs uppercase'>
                   {item.type}
                 </p>
-                <div className='flex flex-row gap-2'>
+                <div className='flex flex-row gap-6'>
                   <Link
                     href={item.github}
                     className='text-muted-foreground border-muted-foreground/40 hover:text-foreground border-b pb-2 text-xs uppercase'

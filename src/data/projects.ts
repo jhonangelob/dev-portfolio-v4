@@ -20,7 +20,7 @@ export const PROJECTS: Project[] = [
       'shadcn/ui',
       'Tailwind CSS',
     ],
-    github: '#',
+    github: 'https://github.com/jhonangelob/homebase',
     live: '#',
   },
   {
@@ -28,8 +28,16 @@ export const PROJECTS: Project[] = [
     description:
       'Personal portfolio site designed and built from scratch — clean dark aesthetic, smooth scroll animations, and fully responsive across all screen sizes.',
     type: 'Personal project',
-    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-    github: '#',
-    live: '#',
+    stack: [
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Next.js',
+      'motion',
+      'shadcn',
+      'Formspree',
+    ],
+    github: 'https://github.com/jhonangelob/dev-portfolio-v4',
+    live: 'https://www.jhonangelob.com/',
   },
 ];
