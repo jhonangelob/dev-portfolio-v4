@@ -37,7 +37,7 @@ const formSchema = z.object({
 
 type ContactForm = z.infer<typeof formSchema>;
 
-const API_KEY = process.env.NEXT_PUBLIC_FORMSPREE_KEY || '';
+const API_KEY = process.env.NEXT_PUBLIC_FORMSPREE_KEY || 'placeholder';
 
 const Contact = () => {
   const [serverState, sendToFormspree] = useFormspree(API_KEY);
