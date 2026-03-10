@@ -1,0 +1,99 @@
+'use client';
+
+import Link from 'next/link';
+
+import { motion } from 'framer-motion';
+import { MoveUpRightIcon } from 'lucide-react';
+
+import { PROJECTS } from '@/data/projects';
+import { fadeUp, stagger } from '@/lib/motion';
+import { cn } from '@/lib/utils';
+
+const Projects = () => {
+  return (
+    <div className='wrapper' id='projects'>
+      <div className='mx-auto flex h-full w-full max-w-6xl flex-col items-center gap-16 py-30'>
+        <motion.div
+          variants={stagger}
+          initial='hidden'
+          whileInView='show'
+          viewport={{ once: true, margin: '-80px' }}
+          className='flex w-full flex-row'
+        >
+          <motion.div
+            variants={fadeUp}
+            className='text-muted-foreground w-80 min-w-80 text-sm font-light uppercase'
+          >
+            05 — Projects
+          </motion.div>
+          <motion.div
+            variants={fadeUp}
+            className='text-foreground text-4xl font-bold'
+          >
+            Selected
+            <br />
+            <p className='text-primary italic'>work.</p>
+            <p className='text-muted-foreground mt-4 text-sm font-normal'>
+              A selection of personal and professional projects reflecting my
+              <br /> approach to engineering and design.
+            </p>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          variants={stagger}
+          initial='hidden'
+          whileInView='show'
+          viewport={{ once: true, margin: '-80px' }}
+          className='bg-secondary grid w-full grid-cols-2 rounded-lg border'
+        >
+          {PROJECTS.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={fadeUp}
+              className={cn(
+                'flex flex-col gap-4 p-10',
+                index % 2 === 0 && 'border-r'
+              )}
+            >
+              <div className='flex flex-row justify-between'>
+                <p className='text-muted-foreground text-xs uppercase'>
+                  {item.type}
+                </p>
+                <div className='flex flex-row gap-2'>
+                  <Link
+                    href={item.github}
+                    className='text-muted-foreground border-muted-foreground/40 hover:text-foreground border-b pb-2 text-xs uppercase'
+                  >
+                    Github
+                  </Link>
+                  <Link
+                    href={item.live}
+                    className='border-muted-foreground/40 text-muted-foreground hover:text-foreground flex flex-row gap-1 border-b text-xs uppercase transition-colors duration-200'
+                  >
+                    Preview <MoveUpRightIcon size={10} className='mt-1' />
+                  </Link>
+                </div>
+              </div>
+              <p className='text-foreground text-sm font-bold'>{item.name}</p>
+              <p className='text-muted-foreground text-xs'>
+                {item.description}
+              </p>
+              <div className='flex flex-wrap gap-2'>
+                {item.stack.map((tag) => (
+                  <div
+                    key={tag}
+                    className='border-border text-muted-foreground bg-card hover:text-foreground rounded-sm border px-3 py-1.5 text-xs transition-colors duration-200 hover:border-white/20'
+                  >
+                    {tag}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
