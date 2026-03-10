@@ -35,7 +35,8 @@ const Projects = () => {
             <p className='text-primary italic'>work.</p>
             <p className='text-muted-foreground mt-4 text-sm font-normal'>
               A selection of personal and professional projects reflecting my
-              <br /> approach to engineering and design.
+              <br className='hidden md:block' /> approach to engineering and
+              design.
             </p>
           </motion.div>
         </motion.div>
@@ -51,7 +52,7 @@ const Projects = () => {
               key={index}
               variants={fadeUp}
               className={cn(
-                'flex flex-col gap-4 p-10',
+                'flex flex-col gap-4 p-6 md:p-10',
                 index % 2 === 0 && 'border-b md:border-r'
               )}
             >

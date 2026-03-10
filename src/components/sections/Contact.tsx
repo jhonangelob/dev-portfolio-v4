@@ -83,9 +83,9 @@ const Contact = () => {
           >
             <p className='text-muted-foreground text-sm'>
               Have a project in mind, a role to fill, or just want to say hello?
-              <br />
+              <br className='hidden md:block' />
               I&apos;m always open to discussing new opportunities and
-              <br /> interesting challenges.
+              <br className='hidden md:block' /> interesting challenges.
             </p>
             <Link
               href={`mailto:${ABOUT.email}`}

@@ -37,9 +37,9 @@ const Hero = () => {
             className='text-secondary-foreground text-xs md:text-sm'
           >
             Software Engineer based in the Philippines — building scalable,
-            <br /> user-focused web applications with modern tooling and a
-            strong eye
-            <br /> for quality.
+            <br className='hidden md:block' /> user-focused web applications
+            with modern tooling and a strong eye
+            <br className='hidden md:block' /> for quality.
           </motion.p>
           <motion.div variants={fadeUp} className='space-x-2'>
             <Link
