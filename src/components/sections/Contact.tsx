@@ -2,10 +2,12 @@
 
 import Link from 'next/link';
 
+import { useForm as useFormspree } from '@formspree/react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'framer-motion';
 import { MoveRightIcon } from 'lucide-react';
 import { Controller, useForm } from 'react-hook-form';
+import { toast } from 'sonner';
 import { z } from 'zod';
 
 import { ABOUT } from '@/data/about';
@@ -29,20 +31,26 @@ const formSchema = z.object({
     .max(50, 'Name must be at most 50 characters.'),
   message: z
     .string()
-    .min(20, 'Message must be at least 20 characters.')
+    .min(10, 'Message must be at least 10 characters.')
     .max(500, 'Message must be at most 500 characters.'),
 });
 
 type ContactForm = z.infer<typeof formSchema>;
 
+const API_KEY = process.env.NEXT_PUBLIC_FORMSPREE_KEY || '';
+
 const Contact = () => {
+  const [serverState, sendToFormspree] = useFormspree(API_KEY);
+
   const form = useForm<ContactForm>({
     resolver: zodResolver(formSchema),
     defaultValues: { email: '', name: '', message: '' },
   });
 
-  const onSubmit = (values: ContactForm) => {
-    console.log(values);
+  const onSubmit = async (values: ContactForm) => {
+    await sendToFormspree(values);
+    toast.success('Message has been sent!');
+    form.reset();
   };
 
   return (
@@ -202,7 +210,10 @@ const Contact = () => {
                   </Field>
                 )}
               />
-              <Button className='bg-primary w-full cursor-pointer justify-start text-xs'>
+              <Button
+                disabled={serverState.submitting}
+                className='bg-primary w-full cursor-pointer justify-start text-xs'
+              >
                 Send message
               </Button>
             </FieldGroup>

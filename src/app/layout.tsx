@@ -4,6 +4,7 @@ import { Poppins } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Loader from '@/components/layout/Loader';
 import Navbar from '@/components/layout/Navbar';
+import { Toaster } from '@/components/ui/sonner';
 import { cn } from '@/lib/utils';
 
 import './globals.css';
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
