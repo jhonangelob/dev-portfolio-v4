@@ -14,7 +14,7 @@ const TechStack = () => {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, margin: '-80px' }}
-          className='flex w-full flex-row'
+          className='flex w-full flex-col gap-4 md:flex-row'
         >
           <motion.div
             variants={fadeUp}
@@ -24,7 +24,7 @@ const TechStack = () => {
           </motion.div>
           <motion.p
             variants={fadeUp}
-            className='text-foreground text-4xl font-bold'
+            className='text-foreground text-2xl font-bold md:text-4xl'
           >
             Technologies &
             <br />
@@ -38,7 +38,7 @@ const TechStack = () => {
           viewport={{ once: true, margin: '-80px' }}
           className='flex w-full flex-row'
         >
-          <div className='w-80 min-w-80' />
+          <div className='hidden w-80 min-w-80 md:block' />
           <motion.div variants={fadeUp}>
             {STACK.map((category) => (
               <div key={category.label} className='mb-8 last:mb-0'>

@@ -38,7 +38,7 @@ const Navbar = () => {
         >
           jhn.
         </Link>
-        <div className='flex flex-row gap-10'>
+        <div className='hidden flex-row gap-10 md:flex'>
           {NAVIGATIONS.map((item) => (
             <Link
               href={'#' + item}

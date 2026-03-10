@@ -53,7 +53,7 @@ const Contact = () => {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, margin: '-80px' }}
-          className='flex w-full flex-row'
+          className='flex w-full flex-col gap-4 md:flex-row'
         >
           <motion.div
             variants={fadeUp}
@@ -63,7 +63,7 @@ const Contact = () => {
           </motion.div>
           <motion.p
             variants={fadeUp}
-            className='text-foreground text-4xl font-bold'
+            className='text-foreground text-2xl font-bold md:text-4xl'
           >
             Let&apos;s work
             <br />
@@ -75,9 +75,12 @@ const Contact = () => {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, margin: '-80px' }}
-          className='flex w-full flex-row gap-20'
+          className='flex w-full flex-col gap-20 md:flex-row'
         >
-          <motion.div variants={fadeUp} className='flex w-1/2 flex-col gap-8'>
+          <motion.div
+            variants={fadeUp}
+            className='flex w-full flex-col gap-8 md:w-1/2'
+          >
             <p className='text-muted-foreground text-sm'>
               Have a project in mind, a role to fill, or just want to say hello?
               <br />
@@ -114,7 +117,7 @@ const Contact = () => {
             variants={fadeUp}
             id='form-rhf-demo'
             onSubmit={form.handleSubmit(onSubmit)}
-            className='w-1/2'
+            className='w-full md:w-1/2'
           >
             <FieldGroup className='gap-4'>
               <Controller

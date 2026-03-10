@@ -25,7 +25,7 @@ const Hero = () => {
           </motion.div>
           <motion.div
             variants={fadeUp}
-            className='text-foreground text-7xl font-bold'
+            className='text-foreground text-4xl font-bold md:text-7xl'
           >
             I specialize in the
             <br /> intricate domain of
@@ -34,7 +34,7 @@ const Hero = () => {
           </motion.div>
           <motion.p
             variants={fadeUp}
-            className='text-secondary-foreground text-sm'
+            className='text-secondary-foreground text-xs md:text-sm'
           >
             Software Engineer based in the Philippines — building scalable,
             <br /> user-focused web applications with modern tooling and a
@@ -44,19 +44,19 @@ const Hero = () => {
           <motion.div variants={fadeUp} className='space-x-2'>
             <Link
               href='#projects'
-              className='bg-primary text-foreground hover:bg-primary/80 cursor-pointer rounded-sm border px-4 py-2 text-sm'
+              className='bg-primary text-foreground hover:bg-primary/80 cursor-pointer rounded-sm border px-4 py-2 text-xs md:text-sm'
             >
               View my work
             </Link>
             <Link
               href='#contact'
-              className='bg-background text-muted-foreground hover:text-foreground hover:bg-secondary hover:border-secondary cursor-pointer rounded-sm border px-4 py-2 text-sm'
+              className='bg-background text-muted-foreground hover:text-foreground hover:bg-secondary hover:border-secondary cursor-pointer rounded-sm border px-4 py-2 text-xs md:text-sm'
             >
               Get in touch
             </Link>
           </motion.div>
         </div>
-        <div className='mt-60 min-w-90 space-y-4'>
+        <div className='mt-60 hidden min-w-90 space-y-4 lg:block'>
           <motion.p
             variants={fadeUp}
             className='text-muted-foreground text-xs uppercase'

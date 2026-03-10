@@ -18,7 +18,7 @@ const Projects = () => {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, margin: '-80px' }}
-          className='flex w-full flex-row'
+          className='flex w-full flex-col gap-4 md:flex-row'
         >
           <motion.div
             variants={fadeUp}
@@ -28,7 +28,7 @@ const Projects = () => {
           </motion.div>
           <motion.div
             variants={fadeUp}
-            className='text-foreground text-4xl font-bold'
+            className='text-foreground text-2xl font-bold md:text-4xl'
           >
             Selected
             <br />
@@ -44,7 +44,7 @@ const Projects = () => {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, margin: '-80px' }}
-          className='bg-secondary grid w-full grid-cols-2 rounded-lg border'
+          className='bg-secondary grid w-full grid-cols-1 rounded-lg border md:grid-cols-2'
         >
           {PROJECTS.map((item, index) => (
             <motion.div
@@ -52,7 +52,7 @@ const Projects = () => {
               variants={fadeUp}
               className={cn(
                 'flex flex-col gap-4 p-10',
-                index % 2 === 0 && 'border-r'
+                index % 2 === 0 && 'border-b md:border-r'
               )}
             >
               <div className='flex flex-row justify-between'>

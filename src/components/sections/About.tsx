@@ -17,7 +17,7 @@ const About = () => {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, margin: '-80px' }}
-          className='flex w-full flex-row'
+          className='flex w-full flex-col gap-4 md:flex-row'
         >
           <motion.div
             variants={fadeUp}
@@ -27,7 +27,7 @@ const About = () => {
           </motion.div>
           <motion.p
             variants={fadeUp}
-            className='text-foreground text-4xl font-bold'
+            className='text-foreground text-2xl font-bold md:text-4xl'
           >
             Building with
             <br /> purpose
@@ -40,7 +40,7 @@ const About = () => {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, margin: '-80px' }}
-          className='flex w-full flex-row'
+          className='flex w-full flex-col gap-8 md:flex-row'
         >
           <motion.div variants={fadeUp} className='w-80 min-w-80 space-y-2'>
             <p className='text-foreground font-bold'>Jhon Angelo Bustarde</p>

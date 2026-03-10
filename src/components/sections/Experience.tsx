@@ -15,7 +15,7 @@ const Experience = () => {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, margin: '-80px' }}
-          className='flex w-full flex-row'
+          className='flex w-full flex-col gap-4 md:flex-row'
         >
           <motion.div
             variants={fadeUp}
@@ -25,7 +25,7 @@ const Experience = () => {
           </motion.div>
           <motion.p
             variants={fadeUp}
-            className='text-foreground text-4xl font-bold'
+            className='text-foreground text-2xl font-bold md:text-4xl'
           >
             Where I&apos;ve
             <br />
@@ -43,7 +43,7 @@ const Experience = () => {
             <motion.div
               key={item.company}
               variants={fadeUp}
-              className='flex w-full flex-row border-b py-10'
+              className='flex w-full flex-col gap-4 border-b py-10 md:flex-row'
             >
               <div className='flex w-80 min-w-80 flex-col gap-1'>
                 <p className='text-muted-foreground text-xs'>{item.period}</p>

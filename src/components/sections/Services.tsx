@@ -16,7 +16,7 @@ const Services = () => {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, margin: '-80px' }}
-          className='flex w-full flex-row'
+          className='flex w-full flex-col gap-4 md:flex-row'
         >
           <motion.div
             variants={fadeUp}
@@ -26,15 +26,14 @@ const Services = () => {
           </motion.div>
           <motion.div
             variants={fadeUp}
-            className='text-foreground text-4xl font-bold'
+            className='text-foreground text-2xl font-bold md:text-4xl'
           >
             What I
             <br />
             <p className='text-primary italic'>offer.</p>
             <p className='text-muted-foreground mt-4 text-sm font-normal'>
               Combining thoughtful design with solid engineering across the
-              entire
-              <br /> stack — from pixel-perfect UIs to reliable backend systems.
+              entire stack — from pixel-perfect UIs to reliable backend systems.
             </p>
           </motion.div>
         </motion.div>
@@ -50,17 +49,20 @@ const Services = () => {
               key={item.name}
               variants={fadeUp}
               className={cn(
-                'flex flex-row items-center gap-4 p-8',
+                'flex flex-col items-center gap-4 p-8 md:flex-row',
                 index !== SERVICES.length - 1 && 'border-b'
               )}
             >
-              <p className='text-foreground w-1/4 max-w-1/4 min-w-1/4 text-sm font-bold'>
+              <p className='text-foreground text-sm font-bold md:min-w-1/4'>
                 {item.name}
               </p>
-              <p className='text-muted-foreground text-xs'>
+              <p className='text-muted-foreground text-center text-xs md:text-left'>
                 {item.description}
               </p>
-              <MoveRightIcon size={18} className='text-primary ml-auto' />
+              <MoveRightIcon
+                size={18}
+                className='text-primary ml-auto hidden md:block'
+              />
             </motion.div>
           ))}
         </motion.div>
