@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 const Projects = () => {
   return (
     <div className='wrapper' id='projects'>
-      <div className='mx-auto flex h-full w-full max-w-6xl flex-col items-center gap-16 py-30'>
+      <div className='sub-wrapper'>
         <motion.div
           variants={stagger}
           initial='hidden'
@@ -76,7 +76,7 @@ const Projects = () => {
                 </div>
               </div>
               <p className='text-foreground text-sm font-bold'>{item.name}</p>
-              <p className='text-muted-foreground text-xs'>
+              <p className='text-muted-foreground text-justify text-xs'>
                 {item.description}
               </p>
               <div className='flex flex-wrap gap-2'>

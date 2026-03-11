@@ -8,7 +8,7 @@ import { fadeUp, stagger } from '@/lib/motion';
 const TechStack = () => {
   return (
     <div className='w-full border-b px-4'>
-      <div className='mx-auto flex h-full w-full max-w-6xl flex-col items-center gap-16 py-30'>
+      <div className='sub-wrapper'>
         <motion.div
           variants={stagger}
           initial='hidden'
@@ -36,7 +36,7 @@ const TechStack = () => {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, margin: '-80px' }}
-          className='flex w-full flex-row'
+          className='flex w-full flex-row gap-4'
         >
           <div className='hidden w-80 min-w-80 md:block' />
           <motion.div variants={fadeUp}>

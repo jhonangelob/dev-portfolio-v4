@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 const Services = () => {
   return (
     <div className='wrapper' id='services'>
-      <div className='mx-auto flex h-full w-full max-w-6xl flex-col items-center gap-16 py-30'>
+      <div className='sub-wrapper'>
         <motion.div
           variants={stagger}
           initial='hidden'
@@ -49,7 +49,7 @@ const Services = () => {
               key={item.name}
               variants={fadeUp}
               className={cn(
-                'flex flex-col items-center gap-4 p-8 md:flex-row',
+                'flex flex-col items-center gap-4 p-4 md:flex-row md:gap-8 md:p-8',
                 index !== SERVICES.length - 1 && 'border-b'
               )}
             >

@@ -55,7 +55,7 @@ const Contact = () => {
 
   return (
     <div className='wrapper' id='contact'>
-      <div className='mx-auto flex h-full w-full max-w-6xl flex-col items-center gap-16 py-30'>
+      <div className='sub-wrapper'>
         <motion.div
           variants={stagger}
           initial='hidden'

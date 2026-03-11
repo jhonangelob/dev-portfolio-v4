@@ -11,7 +11,7 @@ import { fadeUp, stagger } from '@/lib/motion';
 const About = () => {
   return (
     <div className='wrapper' id='about'>
-      <div className='mx-auto flex h-full w-full max-w-6xl flex-col items-center gap-16 py-30'>
+      <div className='sub-wrapper'>
         <motion.div
           variants={stagger}
           initial='hidden'
@@ -40,7 +40,7 @@ const About = () => {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, margin: '-80px' }}
-          className='flex w-full flex-col gap-8 md:flex-row'
+          className='flex w-full flex-col gap-4 md:flex-row'
         >
           <motion.div variants={fadeUp} className='w-80 min-w-80 space-y-2'>
             <p className='text-foreground font-bold'>Jhon Angelo Bustarde</p>
@@ -65,7 +65,7 @@ const About = () => {
             {ABOUT.bio.map((item, index) => (
               <p
                 key={index}
-                className='text-muted-foreground text-sm leading-relaxed'
+                className='text-muted-foreground text-justify text-sm leading-relaxed'
               >
                 {item}
               </p>

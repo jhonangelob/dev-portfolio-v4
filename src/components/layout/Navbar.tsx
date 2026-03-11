@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <header
       className={cn(
-        'bg-background sticky top-0 w-full px-4 opacity-95',
+        'bg-background sticky top-0 z-99999 w-full px-4 opacity-95',
         scrollY >= 40 && 'border-b'
       )}
     >

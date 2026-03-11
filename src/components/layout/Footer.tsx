@@ -5,11 +5,11 @@ import { SOCIAL_LINKS } from '@/data/links';
 const Footer = () => {
   return (
     <footer className='px-4'>
-      <div className='mx-auto flex max-w-6xl flex-row items-center justify-between p-4'>
+      <div className='mx-auto flex max-w-6xl flex-row items-center justify-center p-4 md:justify-between'>
         <span className='text-muted-foreground text-xs font-light'>
           © 2026 Jhon Angelo Bustarde
         </span>
-        <div className='flex flex-row gap-6'>
+        <div className='hidden flex-row gap-6 md:flex'>
           {SOCIAL_LINKS.map((item) => (
             <Link
               key={item.label}

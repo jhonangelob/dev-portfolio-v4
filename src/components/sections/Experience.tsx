@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 const Experience = () => {
   return (
     <div className='wrapper scroll-mt-10!' id='experience'>
-      <div className='mx-auto flex h-full w-full max-w-6xl flex-col items-center gap-16 py-30'>
+      <div className='sub-wrapper'>
         <motion.div
           variants={stagger}
           initial='hidden'
