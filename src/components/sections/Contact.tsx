@@ -102,22 +102,22 @@ const Contact = () => {
               {ABOUT.email} <MoveRightIcon size={14} className='text-primary' />
             </Link>
             <div className='flex flex-col gap-2'>
-              <p className='text-muted-foreground text-sm uppercase'>
+              <p className='text-muted-foreground text-xs uppercase'>
                 Based in
               </p>
-              <p className='text-foreground text-sm'>{ABOUT.location}</p>
+              <p className='text-foreground text-xs'>{ABOUT.location}</p>
             </div>
             <div className='flex flex-col gap-2'>
-              <p className='text-muted-foreground text-sm uppercase'>
+              <p className='text-muted-foreground text-xs uppercase'>
                 Timezone
               </p>
-              <p className='text-foreground text-sm'>{ABOUT.timezone}</p>
+              <p className='text-foreground text-xs'>{ABOUT.timezone}</p>
             </div>
             <div className='flex flex-col gap-2'>
-              <p className='text-muted-foreground text-sm uppercase'>
+              <p className='text-muted-foreground text-xs uppercase'>
                 Availability
               </p>
-              <p className='text-sm text-green-400'>{ABOUT.availability}</p>
+              <p className='text-xs text-green-400'>{ABOUT.availability}</p>
             </div>
           </motion.div>
 

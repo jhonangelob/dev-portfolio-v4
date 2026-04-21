@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className='px-4'>
       <div className='mx-auto flex max-w-6xl flex-row items-center justify-center p-4 md:justify-between'>
-        <span className='text-muted-foreground text-sm font-light'>
+        <span className='text-muted-foreground text-xs font-light'>
           © 2026 Jhon Angelo Bustarde
         </span>
         <div className='hidden flex-row gap-6 md:flex'>
@@ -14,7 +14,7 @@ const Footer = () => {
             <Link
               key={item.label}
               href={item.url}
-              className='text-muted-foreground hover:text-foreground cursor-pointer text-sm transition-all duration-300'
+              className='text-muted-foreground hover:text-foreground cursor-pointer text-xs transition-all duration-300'
             >
               {item.label}
             </Link>
