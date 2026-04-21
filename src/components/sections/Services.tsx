@@ -56,7 +56,7 @@ const Services = () => {
               <p className='text-foreground text-sm font-bold md:min-w-1/4'>
                 {item.name}
               </p>
-              <p className='text-muted-foreground text-center text-xs md:text-left'>
+              <p className='text-muted-foreground text-center text-sm md:text-left'>
                 {item.description}
               </p>
               <MoveRightIcon

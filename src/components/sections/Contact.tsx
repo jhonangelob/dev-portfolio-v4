@@ -102,19 +102,19 @@ const Contact = () => {
               {ABOUT.email} <MoveRightIcon size={14} className='text-primary' />
             </Link>
             <div className='flex flex-col gap-2'>
-              <p className='text-muted-foreground text-xs uppercase'>
+              <p className='text-muted-foreground text-sm uppercase'>
                 Based in
               </p>
               <p className='text-foreground text-sm'>{ABOUT.location}</p>
             </div>
             <div className='flex flex-col gap-2'>
-              <p className='text-muted-foreground text-xs uppercase'>
+              <p className='text-muted-foreground text-sm uppercase'>
                 Timezone
               </p>
               <p className='text-foreground text-sm'>{ABOUT.timezone}</p>
             </div>
             <div className='flex flex-col gap-2'>
-              <p className='text-muted-foreground text-xs uppercase'>
+              <p className='text-muted-foreground text-sm uppercase'>
                 Availability
               </p>
               <p className='text-sm text-green-400'>{ABOUT.availability}</p>
@@ -135,7 +135,7 @@ const Contact = () => {
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel
                       htmlFor='form-rhf-demo-title'
-                      className='text-muted-foreground text-xs font-normal uppercase'
+                      className='text-muted-foreground text-sm font-normal uppercase'
                     >
                       Email address
                     </FieldLabel>
@@ -145,7 +145,7 @@ const Contact = () => {
                       aria-invalid={fieldState.invalid}
                       placeholder='you@example.com'
                       autoComplete='off'
-                      className='placeholder:text-xs [&]:text-xs'
+                      className='placeholder:text-sm [&]:text-sm'
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -160,7 +160,7 @@ const Contact = () => {
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel
                       htmlFor='form-name'
-                      className='text-muted-foreground text-xs font-normal uppercase'
+                      className='text-muted-foreground text-sm font-normal uppercase'
                     >
                       Your name
                     </FieldLabel>
@@ -170,7 +170,7 @@ const Contact = () => {
                       aria-invalid={fieldState.invalid}
                       placeholder='John Smith'
                       autoComplete='off'
-                      className='placeholder:text-xs [&]:text-xs'
+                      className='placeholder:text-sm [&]:text-sm'
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -185,7 +185,7 @@ const Contact = () => {
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel
                       htmlFor='form-message'
-                      className='text-muted-foreground text-xs font-normal uppercase'
+                      className='text-muted-foreground text-sm font-normal uppercase'
                     >
                       Message
                     </FieldLabel>
@@ -195,11 +195,11 @@ const Contact = () => {
                         id='form-message'
                         placeholder='Tell me about your project or opportunity...'
                         rows={6}
-                        className='min-h-24 resize-none placeholder:text-xs [&]:text-xs'
+                        className='min-h-24 resize-none placeholder:text-sm [&]:text-sm'
                         aria-invalid={fieldState.invalid}
                       />
                       <InputGroupAddon align='block-end'>
-                        <InputGroupText className='text-xs tabular-nums'>
+                        <InputGroupText className='text-sm tabular-nums'>
                           {field.value.length}/100 characters
                         </InputGroupText>
                       </InputGroupAddon>
@@ -212,7 +212,7 @@ const Contact = () => {
               />
               <Button
                 disabled={serverState.submitting}
-                className='bg-primary w-full cursor-pointer justify-start text-xs'
+                className='bg-primary w-full cursor-pointer justify-start text-sm'
               >
                 Send message
               </Button>

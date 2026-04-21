@@ -46,8 +46,8 @@ const Experience = () => {
               className='flex w-full flex-col gap-4 border-b py-10 md:flex-row'
             >
               <div className='flex w-80 min-w-80 flex-col gap-1'>
-                <p className='text-muted-foreground text-xs'>{item.period}</p>
-                <p className='text-muted-foreground text-xs'>{item.location}</p>
+                <p className='text-muted-foreground text-sm'>{item.period}</p>
+                <p className='text-muted-foreground text-sm'>{item.location}</p>
                 <div
                   className={cn(
                     'mt-1 w-fit rounded-md border px-2 py-1 text-[8px] uppercase',
@@ -61,8 +61,8 @@ const Experience = () => {
               </div>
               <div className='flex flex-col gap-2'>
                 <p className='text-foreground text-sm'>{item.role}</p>
-                <p className='text-muted-foreground text-xs'>{item.company}</p>
-                <p className='text-muted-foreground mt-1 text-xs'>
+                <p className='text-muted-foreground text-sm'>{item.company}</p>
+                <p className='text-muted-foreground mt-1 text-sm'>
                   {item.description}
                 </p>
               </div>
